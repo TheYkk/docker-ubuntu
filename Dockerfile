@@ -43,9 +43,6 @@ RUN cp $HOME/noVNC/vnc.html $HOME/noVNC/index.html
 # Clone websockify for noVNC
 RUN git clone https://github.com/kanaka/websockify $HOME/noVNC/utils/websockify
 
-RUN apt install -y snapd
-
-RUN snap install code --classic
 
 # Copy supervisor config
 COPY supervisor.conf /etc/supervisor/conf.d/
